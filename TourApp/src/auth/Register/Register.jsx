@@ -1,13 +1,13 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
+// import {darkGreen} from '../../Components/Constants';
 import {
   View,
   Text,
-  Image,
   StyleSheet,
-  Dimensions,
   TextInput,
   TouchableOpacity,
 } from 'react-native';
+import Btn from '../../Components/Btn';
 
 const Tutorial = props => {
   return (
@@ -16,7 +16,7 @@ const Tutorial = props => {
       <View style={{backgroundColor: '#ffffff'}}>
         <View
           style={{
-            backgroundColor: '#4f5898',
+            backgroundColor: '#0d6efd',
             padding: 50,
             borderBottomLeftRadius: 60,
           }}>
@@ -67,25 +67,7 @@ const Tutorial = props => {
 
           <View style={styles.spacing}></View>
 
-          <TouchableOpacity>
-            <View
-              style={{
-                margin: 10,
-                backgroundColor: '#4f5898',
-                justifyContent: 'center',
-                alignItems: 'center',
-                borderRadius: 100,
-                paddingVertical: 10,
-              }}>
-              <Text
-                style={{
-                  color: 'white',
-                  fontSize: 20,
-                }}>
-                Login{' '}
-              </Text>
-            </View>
-          </TouchableOpacity>
+          <Btn btnLabel={'Login'} />
         </View>
       </View>
     </View>
@@ -116,15 +98,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#e7e7e7',
     padding: 10,
   },
-  imagecontainer: {
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  image_logo: {
-    width: 200,
-    height: 200,
-    resizeMode: 'contain',
-  },
+
   card: {
     backgroundColor: '#fff',
     padding: 10,
