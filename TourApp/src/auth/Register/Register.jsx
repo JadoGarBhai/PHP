@@ -1,5 +1,5 @@
 import React from 'react';
-import {darkGreen} from '../../Components/Constants';
+import {bgColor, mainHeading} from '../../Components/Constants';
 import {
   View,
   Text,
@@ -16,23 +16,25 @@ const Tutorial = props => {
       <View style={{backgroundColor: '#ffffff'}}>
         <View
           style={{
-            backgroundColor: '#0d6efd',
+            backgroundColor: bgColor,
             padding: 50,
             borderBottomLeftRadius: 60,
           }}>
-          <View style={{justifyContent: 'center', alignItems: 'center'}}>
-            <Text style={{fontWeight: '700', fontSize: 28, color: '#fff'}}>
-              Jado's Tour App
+          <View style={{alignItems: 'center'}}>
+            <Text
+              style={{fontSize: mainHeading, fontWeight: 900, color: '#fff'}}>
+              Welcome Back !
             </Text>
+
             <Text style={{fontWeight: '300', fontSize: 15, color: '#fff'}}>
-              Create New Account
+              Login To Your Account
             </Text>
           </View>
         </View>
       </View>
 
       {/* Container 2 */}
-      <View style={{backgroundColor: '#4f5898'}}>
+      <View style={{backgroundColor: bgColor}}>
         <View
           style={{
             justifyContent: 'center',
@@ -42,32 +44,44 @@ const Tutorial = props => {
           }}>
           <View style={styles.spacing_big}></View>
 
-          <View style={styles.label}>
-            <Text style={styles.label}>Username</Text>
+          <View>
+            <View style={styles.label}>
+              <Text style={styles.label}>Email</Text>
+            </View>
+            <TextInput
+              style={styles.input}
+              autoCapitalize="none"
+              autoCorrect={false}
+              // value={'username'}
+              placeholder="Enter Your Email"
+            />
           </View>
-          <TextInput
-            style={styles.input}
-            autoCapitalize="none"
-            autoCorrect={false}
-            value={'username'}
-          />
 
           <View style={styles.spacing}></View>
 
-          <View style={styles.label}>
-            <Text style={styles.label}>Password</Text>
+          <View>
+            <View style={styles.label}>
+              <Text style={styles.label}>Password</Text>
+            </View>
+            <TextInput
+              style={styles.input}
+              autoCapitalize="none"
+              autoCorrect={false}
+              secureTextEntry={true}
+              // value={'password'}
+              placeholder="Enter Your Password"
+            />
           </View>
-          <TextInput
-            style={styles.input}
-            autoCapitalize="none"
-            autoCorrect={false}
-            secureTextEntry={true}
-            value={'password'}
-          />
 
           <View style={styles.spacing}></View>
 
-          <Btn btnLabel={'Login'} />
+          <View
+            style={{
+              borderTopWidth: 1,
+              borderTopColor: '#999',
+            }}></View>
+
+          <Btn btnLabel={'Login'} bgColor={bgColor} />
         </View>
       </View>
     </View>
