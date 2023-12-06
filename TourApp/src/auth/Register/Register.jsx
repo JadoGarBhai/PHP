@@ -41,6 +41,8 @@ const Register = props => {
             backgroundColor: '#fff',
             paddingHorizontal: 30,
             borderTopRightRadius: 60,
+            maxHeight: '100',
+            paddingBottom: '5%',
           }}>
           <View style={styles.spacing_big}></View>
 
