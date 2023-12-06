@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import Btn from '../../Components/Btn';
 
-const Tutorial = props => {
+const Register = props => {
   return (
     <View>
       {/* Contianer 1 */}
@@ -23,11 +23,11 @@ const Tutorial = props => {
           <View style={{alignItems: 'center'}}>
             <Text
               style={{fontSize: mainHeading, fontWeight: 900, color: '#fff'}}>
-              Welcome Back !
+              Jado's Tour App
             </Text>
 
             <Text style={{fontWeight: '300', fontSize: 15, color: '#fff'}}>
-              Login To Your Account
+              Create New Account
             </Text>
           </View>
         </View>
@@ -75,20 +75,49 @@ const Tutorial = props => {
 
           <View style={styles.spacing}></View>
 
+          <View>
+            <View style={styles.label}>
+              <Text style={styles.label}>Confrim Password</Text>
+            </View>
+            <TextInput
+              style={styles.input}
+              autoCapitalize="none"
+              autoCorrect={false}
+              secureTextEntry={true}
+              // value={'password'}
+              placeholder="Re-write The Password"
+            />
+          </View>
+
           <View
             style={{
-              borderTopWidth: 1,
-              borderTopColor: '#999',
-            }}></View>
+              marginLeft: 10,
+              marginTop: 5,
+            }}>
+            <Text>
+              I have read the{' '}
+              <Text style={{color: bgColor}}>Terms of Service.</Text>
+            </Text>
+          </View>
 
-          <Btn btnLabel={'Login'} bgColor={bgColor} />
+          <View style={styles.spacing_big}></View>
+          <View style={styles.spacing_big}></View>
+
+          <Btn btnLabel={'Register'} bgColor={bgColor} />
+
+          <View style={{display: 'flex', alignItems: 'center'}}>
+            <Text>
+              Already have an account?{' '}
+              <Text style={{color: bgColor}}>Login</Text>
+            </Text>
+          </View>
         </View>
       </View>
     </View>
   );
 };
 
-export default Tutorial;
+export default Register;
 
 const styles = StyleSheet.create({
   spacing: {
