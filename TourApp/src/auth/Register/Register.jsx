@@ -1,5 +1,5 @@
 import React from 'react';
-// import {darkGreen} from '../../Components/Constants';
+import {darkGreen} from '../../Components/Constants';
 import {
   View,
   Text,
