@@ -3,3 +3,4 @@ export const green = '#2BB789';
 // export const bgColor = '#006A42';
 export const bgColor = '#0064A2';
 export const mainHeading = 29;
+export const title = 'My Tour App';

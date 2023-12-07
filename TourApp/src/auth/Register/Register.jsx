@@ -1,5 +1,5 @@
 import React from 'react';
-import {bgColor, mainHeading} from '../../Components/Constants';
+import {bgColor, mainHeading, title} from '../../Components/Constants';
 import {
   View,
   Text,
@@ -22,8 +22,13 @@ const Register = props => {
           }}>
           <View style={{alignItems: 'center'}}>
             <Text
-              style={{fontSize: mainHeading, fontWeight: 900, color: '#fff'}}>
-              Jado's Tour App
+              style={{
+                fontSize: mainHeading,
+                fontWeight: 900,
+                color: '#fff',
+                fontFamily: 'Andika-Bold',
+              }}>
+              {title}
             </Text>
 
             <Text style={{fontWeight: '300', fontSize: 15, color: '#fff'}}>

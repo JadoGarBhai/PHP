@@ -1,4 +1,5 @@
 import React from 'react';
+import Icon from 'react-native-vector-icons/FontAwesome';
 import {bgColor, mainHeading} from '../../Components/Constants';
 import {
   View,
@@ -6,6 +7,7 @@ import {
   StyleSheet,
   TextInput,
   TouchableOpacity,
+  Image,
 } from 'react-native';
 import Btn from '../../Components/Btn';
 
@@ -75,13 +77,81 @@ const Login = props => {
 
           <View style={styles.spacing}></View>
 
+          <View>
+            <View
+              style={{
+                borderTopWidth: 1,
+                borderTopColor: '#999',
+              }}></View>
+
+            <View
+              style={{
+                marginLeft: 99,
+                marginTop: -12,
+                backgroundColor: '#fff',
+                width: '33%',
+              }}>
+              <Text
+                style={{
+                  color: bgColor,
+                }}>
+                or continue with
+              </Text>
+            </View>
+          </View>
+
+          <View style={styles.spacing}></View>
+
           <View
             style={{
-              borderTopWidth: 1,
-              borderTopColor: '#999',
-            }}></View>
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              flexDirection: 'row',
+              gap: 10,
+            }}>
+            <TouchableOpacity style={{...styles.icon, borderColor: '#3b5998'}}>
+              <Icon name="facebook-f" color="#3b5998" size={35} />
+            </TouchableOpacity>
+
+            <TouchableOpacity
+              style={{
+                ...styles.icon,
+                borderTopColor: 'red',
+                borderBottomColor: 'green',
+                borderRightColor: 'yellow',
+              }}>
+              <Image
+                source={require('../../assesets/images/google.png')}
+                style={styles.image}
+              />
+            </TouchableOpacity>
+
+            <TouchableOpacity style={{...styles.icon, borderColor: '#0a66c2'}}>
+              <Icon name="linkedin" color="#0a66c2" size={35} />
+            </TouchableOpacity>
+          </View>
 
           <Btn btnLabel={'Login'} bgColor={bgColor} />
+
+          <View
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}>
+            <Text>
+              Create a new account?{' '}
+              <TouchableOpacity>
+                <Text
+                  style={{
+                    color: bgColor,
+                  }}>
+                  Signup
+                </Text>
+              </TouchableOpacity>
+            </Text>
+          </View>
         </View>
       </View>
     </View>
@@ -123,5 +193,22 @@ const styles = StyleSheet.create({
 
     // alignItems:'center',
     // justifyContent:'center'
+  },
+
+  icon: {
+    height: 50,
+    width: 50,
+    backgroundColor: '#fff',
+    borderRadius: 50,
+    borderWidth: 2,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
+  image: {
+    width: 35,
+    height: 35,
+    resizeMode: 'cover',
   },
 });
