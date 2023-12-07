@@ -47,7 +47,7 @@ const Register = props => {
             paddingHorizontal: 30,
             borderTopRightRadius: 60,
             maxHeight: '100',
-            paddingBottom: '5%',
+            paddingBottom: '15%',
           }}>
           <View style={styles.spacing_big}></View>
 
@@ -112,11 +112,22 @@ const Register = props => {
 
           <Btn btnLabel={'Register'} bgColor={bgColor} />
 
-          <View style={{display: 'flex', alignItems: 'center'}}>
-            <Text>
-              Already have an account?{' '}
-              <Text style={{color: bgColor}}>Login</Text>
-            </Text>
+          <View
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              flexDirection: 'row',
+            }}>
+            <Text>Already have an account? </Text>
+            <TouchableOpacity>
+              <Text
+                style={{
+                  color: bgColor,
+                }}>
+                Login
+              </Text>
+            </TouchableOpacity>
           </View>
         </View>
       </View>
@@ -134,8 +145,6 @@ const styles = StyleSheet.create({
     margin: 30,
   },
   label: {
-    // justifyContent: 'center',
-    // alignItems: 'center',\
     fontWeight: '300',
     paddingLeft: 5,
     fontSize: 17,
@@ -147,17 +156,5 @@ const styles = StyleSheet.create({
     borderRadius: 100,
     backgroundColor: '#e7e7e7',
     padding: 10,
-  },
-
-  card: {
-    backgroundColor: '#fff',
-    padding: 10,
-    margin: 10,
-    borderRadius: 7,
-    elevation: 5,
-    marginTop: 100,
-
-    // alignItems:'center',
-    // justifyContent:'center'
   },
 });

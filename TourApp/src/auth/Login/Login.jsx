@@ -43,7 +43,7 @@ const Login = props => {
             backgroundColor: '#fff',
             paddingHorizontal: 30,
             borderTopRightRadius: 60,
-            paddingBottom: '5%',
+            paddingBottom: '20%',
           }}>
           <View style={styles.spacing_big}></View>
 
@@ -110,6 +110,7 @@ const Login = props => {
               alignItems: 'center',
               flexDirection: 'row',
               gap: 10,
+              marginTop: -10,
             }}>
             <TouchableOpacity style={{...styles.icon, borderColor: '#3b5998'}}>
               <Icon name="facebook-f" color="#3b5998" size={35} />
@@ -135,6 +136,7 @@ const Login = props => {
 
           <View style={styles.spacing_big}></View>
           <View style={styles.spacing_big}></View>
+          <View style={styles.spacing}></View>
           <View style={styles.spacing}></View>
 
           <Btn btnLabel={'Login'} bgColor={bgColor} />
@@ -172,8 +174,6 @@ const styles = StyleSheet.create({
     margin: 30,
   },
   label: {
-    // justifyContent: 'center',
-    // alignItems: 'center',\
     fontWeight: '300',
     paddingLeft: 5,
     fontSize: 17,
@@ -185,18 +185,6 @@ const styles = StyleSheet.create({
     borderRadius: 100,
     backgroundColor: '#e7e7e7',
     padding: 10,
-  },
-
-  card: {
-    backgroundColor: '#fff',
-    padding: 10,
-    margin: 10,
-    borderRadius: 7,
-    elevation: 5,
-    marginTop: 100,
-
-    // alignItems:'center',
-    // justifyContent:'center'
   },
 
   icon: {
