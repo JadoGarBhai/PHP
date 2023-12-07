@@ -43,6 +43,7 @@ const Login = props => {
             backgroundColor: '#fff',
             paddingHorizontal: 30,
             borderTopRightRadius: 60,
+            paddingBottom: '5%',
           }}>
           <View style={styles.spacing_big}></View>
 
@@ -132,6 +133,10 @@ const Login = props => {
             </TouchableOpacity>
           </View>
 
+          <View style={styles.spacing_big}></View>
+          <View style={styles.spacing_big}></View>
+          <View style={styles.spacing}></View>
+
           <Btn btnLabel={'Login'} bgColor={bgColor} />
 
           <View
@@ -139,18 +144,17 @@ const Login = props => {
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
+              flexDirection: 'row',
             }}>
-            <Text>
-              Create a new account?{' '}
-              <TouchableOpacity>
-                <Text
-                  style={{
-                    color: bgColor,
-                  }}>
-                  Signup
-                </Text>
-              </TouchableOpacity>
-            </Text>
+            <Text>Create a new account? </Text>
+            <TouchableOpacity>
+              <Text
+                style={{
+                  color: bgColor,
+                }}>
+                Signup
+              </Text>
+            </TouchableOpacity>
           </View>
         </View>
       </View>
