@@ -1,4 +1,6 @@
 import React from 'react';
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {bgColor, mainHeading, title} from '../../Components/Constants';
 import {
   View,
@@ -9,7 +11,7 @@ import {
 } from 'react-native';
 import Btn from '../../Components/Btn';
 
-const Register = props => {
+const Register = ({navigation}) => {
   return (
     <View>
       {/* Contianer 1 */}
@@ -120,7 +122,7 @@ const Register = props => {
               flexDirection: 'row',
             }}>
             <Text>Already have an account? </Text>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={() => navigation.navigate('Login')}>
               <Text
                 style={{
                   color: bgColor,
