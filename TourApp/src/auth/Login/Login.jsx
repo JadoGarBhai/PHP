@@ -11,7 +11,7 @@ import {
 } from 'react-native';
 import Btn from '../../Components/Btn';
 
-const Login = props => {
+const Login = ({navigation}) => {
   return (
     <View>
       {/* Contianer 1 */}
@@ -149,7 +149,7 @@ const Login = props => {
               flexDirection: 'row',
             }}>
             <Text>Create a new account? </Text>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={() => navigation.navigate('Register')}>
               <Text
                 style={{
                   color: bgColor,
